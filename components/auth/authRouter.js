@@ -16,4 +16,6 @@ router.get('/signUp', function (req, res, next) {
     res.render('auth/signUp', {title: 'Express'});
 });
 
+router.get('/logout', authController.logout);
+
 module.exports = router;
