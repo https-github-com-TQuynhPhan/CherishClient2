@@ -10,7 +10,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./components/product/productRouter');
 const contactRouter = require('./components/contact/contact');
-const accountRouter = require('./components/account/account');
+const authRouter = require('./components/auth/authRouter');
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true}).then(()=>
 {
@@ -38,7 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
 app.use('/contact', contactRouter);
-app.use('/account', accountRouter);
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

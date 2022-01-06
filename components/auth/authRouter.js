@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const accountController=require('./accountController');
+const authController=require('./authController');
 
 /* GET home page. */
-router.get('/signIn', accountController.list);
+router.get('/signIn', authController.list);
 
 router.get('/signUp', function(req, res, next) {
-  res.render('account/signUp', { title: 'Express' });
+  res.render('auth/signUp', { title: 'Express' });
 });
 
 module.exports = router;
