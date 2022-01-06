@@ -6,6 +6,11 @@
             </div>
         </div>
         <div class="row justify-content-center">
+            {{#if wrongPassword}}
+                <b>Username and password do not match</b>
+            {{/if}}
+        </div>
+        <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap py-5">
                     <form method="post">

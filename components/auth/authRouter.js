@@ -9,7 +9,7 @@ router.get('/signIn', authController.signInGet);
 router.post('/signIn',
     passport.authenticate('local', {
         successRedirect: '/',
-        failureRedirect: '/signIn'
+        failureRedirect: '/signIn?wrongPassword'
     }));
 
 router.get('/signUp', function (req, res, next) {
