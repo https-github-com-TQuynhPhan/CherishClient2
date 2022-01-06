@@ -5,9 +5,9 @@ const useraccounts=require('../models/useraccounts');
 
 passport.use(new LocalStrategy(
 
-    function (username, password, done) {
-        useraccounts.findOne({ Account: username }, function (err, user) {
-            if (err) { return done(err); }
+    async function (username, password, done) {
+        try{
+            const user=await useraccounts.findOne({ Account: username }).lean();
             if (!user) {
                 return done(null, false, { message: 'Incorrect username.' });
             }
@@ -15,8 +15,11 @@ passport.use(new LocalStrategy(
                 return done(null, false, { message: 'Incorrect password.' });
             }
             return done(null, user);
-        });
-    }
+        }
+        catch(err){
+            return done(err);
+        }
+    },
 ));
 
 passport.serializeUser(function (user, done) {
