@@ -23,13 +23,11 @@ passport.use(new LocalStrategy(
 ));
 
 passport.serializeUser(function (user, done) {
-    done(null, user.Account);
+    done(null, {account:user.Account,password:user.Password});
 });
 
-passport.deserializeUser(function (account, done) {
-    useraccounts.findOne({Account:account}, function(err, user) {
-        done(err, user);
-    });
+passport.deserializeUser(function (user, done) {
+    return done(null,user);
 });
 
 function validPassword(user,password){
