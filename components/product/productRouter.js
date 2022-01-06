@@ -4,7 +4,7 @@ var router = express.Router();
 const productController=require('./productController');
 
 /* GET home page. */
-router.get('/soapList', productController.list);
+router.get('/soapList', productController.listProduct);
 
 router.get('/candleList', function(req, res, next) {
   res.render('product/candleList', { title: 'Express' });

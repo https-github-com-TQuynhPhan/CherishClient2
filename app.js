@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const productRouter = require('./components/product/product');
+const productRouter = require('./components/product/productRouter');
 const contactRouter = require('./components/contact/contact');
 const accountRouter = require('./components/account/account');
 
