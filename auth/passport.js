@@ -19,6 +19,18 @@ passport.use(new LocalStrategy(
     }
 ));
 
+passport.serializeUser(function (user, done) {
+    done(null, user.Account);
+});
+
+passport.deserializeUser(function (account, done) {
+    useraccounts.findOne({Account:account}, function(err, user) {
+        done(err, user);
+    });
+});
+
 function validPassword(user,password){
     return user.Password===password;
 };
+
+module.exports=passport;
