@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const passport = require('passport')
     , LocalStrategy = require('passport-local').Strategy;
 
@@ -11,7 +12,8 @@ passport.use(new LocalStrategy(
             if (!user) {
                 return done(null, false, { message: 'Incorrect username.' });
             }
-            if (!validPassword(user,password)) {
+            const match=await validPassword(user,password);
+            if (!match) {
                 return done(null, false, { message: 'Incorrect password.' });
             }
             return done(null, user);
@@ -30,8 +32,8 @@ passport.deserializeUser(function (user, done) {
     return done(null,user);
 });
 
-function validPassword(user,password){
-    return user.Password===password;
+async function validPassword(user,password){
+    return bcrypt.compare(password, user.Password);
 };
 
 module.exports=passport;

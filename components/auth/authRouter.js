@@ -12,9 +12,9 @@ router.post('/signIn',
         failureRedirect: '/signIn?wrongPassword'
     }));
 
-router.get('/signUp', function (req, res, next) {
-    res.render('auth/signUp', {title: 'Express'});
-});
+router.get('/signUp', authController.signUpGet);
+
+router.post('/signUp',authController.signUpPost);
 
 router.get('/logout', authController.logout);
 

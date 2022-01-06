@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1141acba-0aed-4c2e-a0ae-bc4b1a8c0b80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/passport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/authController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/authRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/authRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/signIn.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/signIn.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/signUp.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/signUp.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,9 @@
       <workItem from="1641455915581" duration="1779000" />
       <workItem from="1641457754028" duration="1779000" />
       <workItem from="1641459566925" duration="1781000" />
-      <workItem from="1641461398823" duration="945000" />
+      <workItem from="1641461398823" duration="2116000" />
+      <workItem from="1641463564874" duration="1783000" />
+      <workItem from="1641465384191" duration="281000" />
     </task>
     <servers />
   </component>
