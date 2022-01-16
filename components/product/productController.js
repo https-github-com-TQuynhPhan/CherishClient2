@@ -18,3 +18,15 @@ exports.listProduct = async (req, res)=>{
 	// ]);
 	res.render('product/soapList', { products});
 };
+
+exports.listDetail=async (req,res)=>{
+	let id="SP001";
+	try{
+		id=req.params.ProductID;
+		id=id.substring(1);
+	}catch (e) {
+
+	}
+	const productDetail=await productService.listDetail(id);
+	res.render('product/productDetail',{productDetail});
+};
