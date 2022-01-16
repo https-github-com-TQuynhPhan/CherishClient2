@@ -15,12 +15,13 @@ const contactRouter = require('./components/contact/contact');
 const authRouter = require('./components/auth/authRouter');
 const sessionHandler = require('./auth/sessionHandler');
 const loggerHandler = require('./auth/logger');
+const apiProductRouter=require('./api/product');
 
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log('Database connected');
 }).catch((error) => {
     console.log('Error to connect database');
-})
+});
 
 const app = express();
 
@@ -56,6 +57,7 @@ app.use('/users', usersRouter);
 app.use('/product', productRouter);
 app.use('/contact', contactRouter);
 app.use('/', authRouter);
+app.use('/api/product',apiProductRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

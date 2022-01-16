@@ -2,110 +2,110 @@
 
 <!--Section: Block Content-->
 <section class="mb-5">
-{{#each productDetail}}
-    <div class="row">
-        <div class="col-md-6 mb-4 mb-md-0">
+    {{#each productDetail}}
+        <div class="row">
+            <div class="col-md-6 mb-4 mb-md-0">
 
-            <div id="mdb-lightbox-ui"></div>
+                <div id="mdb-lightbox-ui"></div>
 
-            <div class="mdb-lightbox">
+                <div class="mdb-lightbox">
 
-                <div class="row product-gallery mx-1">
-                    <div class="col-12 mb-0">
-                        <figure class="view overlay rounded z-depth-1 main-img">
-                            <a href="/images/{{Image}}" data-size="710x823">
-                                <img src="/images/{{Image}}" width="500px" height="500px"
-                                     class="img-fluid z-depth-1">
-                            </a>
-                        </figure>
+                    <div class="row product-gallery mx-1">
+                        <div class="col-12 mb-0">
+                            <figure class="view overlay rounded z-depth-1 main-img">
+                                <a href="/images/{{Image}}" data-size="710x823">
+                                    <img src="/images/{{Image}}" width="500px" height="500px"
+                                         class="img-fluid z-depth-1">
+                                </a>
+                            </figure>
+
+                        </div>
+
 
                     </div>
 
 
                 </div>
 
+            </div>
+            <div class="col-md-6">
 
+                <h5>{{ProductName}}</h5>
+                <p class="mb-2 text-muted text-uppercase small">Shirts</p>
+                <div class="rating">
+                    <i class="fas fa-star fa-sm text-primary"></i>
+                    <i class="fas fa-star fa-sm text-primary"></i>
+                    <i class="fas fa-star fa-sm text-primary"></i>
+                    <i class="fas fa-star fa-sm text-primary"></i>
+                    <i class="far fa-star fa-sm text-primary"></i>
+                </div>
+                <p><span class="mr-1"><strong>${{Price}}</strong></span></p>
+                <p class="pt-1">{{Description}}</p>
+                <div class="table-responsive">
+                    <table class="table table-sm table-borderless mb-0">
+                        <tbody>
+                        <tr>
+                            <th class="pl-0 w-50" scope="row"><strong>Brand</strong></th>
+                            <td>{{BrandID}}</td>
+                        </tr>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row"><strong>Producing Year</strong></th>
+                            <td>{{ProducingYear}}</td>
+                        </tr>
+                        <tr>
+                            <th class="pl-0 w-25" scope="row"><strong>Color</strong></th>
+                            <td>{{Color}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                <div class="table-responsive mb-2">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                        <tr>
+                            <td class="pl-0 pb-0 w-25">Quantity</td>
+                            <td class="pb-0">Select size</td>
+                        </tr>
+                        <tr>
+                            <td class="pl-0">
+                                <input aria-label="quantity" class="input-qty" min="1" name="" type="number" value="1">
+                            </td>
+                            <td>
+                                <div class="mt-1">
+                                    <div class="form-check form-check-inline pl-0">
+                                        <input type="radio" class="form-check-input" id="small"
+                                               name="materialExampleRadios"
+                                               checked>
+                                        <label class="form-check-label small text-uppercase card-link-secondary"
+                                               for="small">Small</label>
+                                    </div>
+                                    <div class="form-check form-check-inline pl-0">
+                                        <input type="radio" class="form-check-input" id="medium"
+                                               name="materialExampleRadios">
+                                        <label class="form-check-label small text-uppercase card-link-secondary"
+                                               for="medium">Medium</label>
+                                    </div>
+                                    <div class="form-check form-check-inline pl-0">
+                                        <input type="radio" class="form-check-input" id="large"
+                                               name="materialExampleRadios">
+                                        <label class="form-check-label small text-uppercase card-link-secondary"
+                                               for="large">Large</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Buy now</button>
+                <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
+                        class="fas fa-shopping-cart pr-2"></i>Add to cart
+                </button>
             </div>
 
         </div>
-        <div class="col-md-6">
-
-            <h5>{{ProductName}}</h5>
-            <p class="mb-2 text-muted text-uppercase small">Shirts</p>
-            <div class="rating">
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="far fa-star fa-sm text-primary"></i>
-            </div>
-            <p><span class="mr-1"><strong>${{Price}}</strong></span></p>
-            <p class="pt-1">{{Description}}</p>
-            <div class="table-responsive">
-                <table class="table table-sm table-borderless mb-0">
-                    <tbody>
-                    <tr>
-                        <th class="pl-0 w-50" scope="row"><strong>Brand</strong></th>
-                        <td>{{BrandID}}</td>
-                    </tr>
-                    <tr>
-                        <th class="pl-0 w-25" scope="row"><strong>Producing Year</strong></th>
-                        <td>{{ProducingYear}}</td>
-                    </tr>
-                    <tr>
-                        <th class="pl-0 w-25" scope="row"><strong>Color</strong></th>
-                        <td>{{Color}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <hr>
-            <div class="table-responsive mb-2">
-                <table class="table table-sm table-borderless">
-                    <tbody>
-                    <tr>
-                        <td class="pl-0 pb-0 w-25">Quantity</td>
-                        <td class="pb-0">Select size</td>
-                    </tr>
-                    <tr>
-                        <td class="pl-0">
-                            <input aria-label="quantity" class="input-qty" min="1" name="" type="number" value="1">
-                        </td>
-                        <td>
-                            <div class="mt-1">
-                                <div class="form-check form-check-inline pl-0">
-                                    <input type="radio" class="form-check-input" id="small"
-                                           name="materialExampleRadios"
-                                           checked>
-                                    <label class="form-check-label small text-uppercase card-link-secondary"
-                                           for="small">Small</label>
-                                </div>
-                                <div class="form-check form-check-inline pl-0">
-                                    <input type="radio" class="form-check-input" id="medium"
-                                           name="materialExampleRadios">
-                                    <label class="form-check-label small text-uppercase card-link-secondary"
-                                           for="medium">Medium</label>
-                                </div>
-                                <div class="form-check form-check-inline pl-0">
-                                    <input type="radio" class="form-check-input" id="large"
-                                           name="materialExampleRadios">
-                                    <label class="form-check-label small text-uppercase card-link-secondary"
-                                           for="large">Large</label>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Buy now</button>
-            <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
-                    class="fas fa-shopping-cart pr-2"></i>Add to cart
-            </button>
-        </div>
-
-    </div>
-{{/each}}
+    {{/each}}
 
 
 </section>
@@ -209,21 +209,27 @@
             <div>
                 <!-- Your review -->
                 <form>
+
+                    {{#unless user}}
+                        <div class="md-form md-outline">
+                            <label for="form75">Name</label>
+                            <input type="text" id="form75" class="form-control pr-6">
+                        </div>
+                    {{/unless}}
+
+
+
+                    <div class="md-form md-outline">
+                        <label for="form77">Rate</label>
+                        <input type="Number" id="form77" class="form-control pr-6"> </br>
+                    </div>
+
                     <div class="md-form md-outline">
                         <label for="form76">Your review</label>
                         <textarea id="form76" class="md-textarea form-control pr-6" rows="4"></textarea>
 
                     </div>
-                    <!-- Name -->
-                    <div class="md-form md-outline">
-                        <label for="form75">Name</label>
-                        <input type="text" id="form75" class="form-control pr-6">
-                    </div>
-                    <!-- Email -->
-                    <div class="md-form md-outline">
-                        <label for="form77">Email</label>
-                        <input type="email" id="form77" class="form-control pr-6"> </br>
-                    </div>
+
                     <div class="text-right pb-2">
                         <button type="submit" class="btn btn-primary">Add a review</button>
                         </br>
