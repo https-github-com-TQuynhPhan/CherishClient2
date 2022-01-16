@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1141acba-0aed-4c2e-a0ae-bc4b1a8c0b80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/product/apiProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/product/apiProductController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/product/productDetail.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productDetail.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/product/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/productService.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/soapList.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productList.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +94,11 @@
       <workItem from="1642319912646" duration="1781000" />
       <workItem from="1642321726452" duration="1780000" />
       <workItem from="1642323538431" duration="1784000" />
+      <workItem from="1642325357885" duration="1224000" />
+      <workItem from="1642329826145" duration="1074000" />
+      <workItem from="1642339642040" duration="1786000" />
+      <workItem from="1642341460123" duration="1785000" />
+      <workItem from="1642343277761" duration="197000" />
     </task>
     <servers />
   </component>

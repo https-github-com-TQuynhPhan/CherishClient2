@@ -1,29 +1,27 @@
 <!-- food section -->
 
-  <section class="food_section layout_padding">
+<section class="food_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Soaps
-        </h2>
-      </div>
+        <div class="heading_container heading_center">
+            <h2>
+                Product
+            </h2>
+        </div>
+        <ul class="filters_menu">
+            <li class="active" data-filter="*">All</li>
+            <li data-filter=".soap">Soap</li>
+            <li data-filter=".candle">Candle</li>
+            <li data-filter=".oil">Oil</li>
+        </ul>
 
-      <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".Frais">Frais</li>
-        <li data-filter=".Chagrin">Chagrin Valley</li>
-        <li data-filter=".Simply">Simply</li>
-      </ul>
-
-      <div class="filters-content">
-        <div class="row grid">
-            {{#each products}}
-
+        <div class="filters-content">
+            <div class="row grid">
+                {{#each products}}
                     <div class="col-sm-6 col-lg-4 all">
                         <div class="box">
                             <div>
                                 <div class="img-box">
-                                    <a href="/product/:{{ProductID}}"><img src="/images/{{Image}}"  width="280px" alt=""></a>
+                                    <a href="/product/:{{ProductID}}"><img src="/images/{{Image}}"  alt="Image"></a>
                                 </div>
                                 <div class="detail-box">
                                     <h5>
@@ -32,11 +30,6 @@
                                     <p>
                                         {{Description}}
                                     </p>
-                                    {{#each category}}
-                                        <p>
-                                            {{CategoryName}}
-                                        </p>
-                                    {{/each}}
 
                                     <div class="options">
                                         <h6>
@@ -101,21 +94,24 @@
                             </div>
                         </div>
                     </div>
-
-            {{/each}}
+                {{/each}}
+            </div>
         </div>
-      </div>
-      <div class="custom-pagination">
-        <ul class="pagination">
 
-<!--          <li class="page-item"><a class="page-link" href="?page="{{page-1}}>Previous</a></li>-->
-          <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-          <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
-          <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
-<!--          <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
-          </ul>
-      </div>
+        <div class="custom-pagination">
+            <ul class="pagination">
+
+                <!--          <li class="page-item"><a class="page-link" href="?page="{{page-1}}>Previous</a></li>-->
+                <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+                <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+                <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
+                <li class="page-item"><a class="page-link" href="?page=5">5</a></li>
+                <li class="page-item"><a class="page-link" href="?page=6">6</a></li>
+                <!--          <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+            </ul>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- end food section -->
+<!-- end food section -->
