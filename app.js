@@ -6,6 +6,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('./auth/passport');
+const express_handlebars_sections = require('express-handlebars-sections');
 require('dotenv').config();
 
 const indexRouter = require('./routes/index');
