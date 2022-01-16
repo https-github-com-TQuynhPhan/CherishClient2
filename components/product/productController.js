@@ -1,7 +1,20 @@
 const productService=require('./productService');
+const productCategories=require('../../models/productcategories')
 
 exports.listProduct = async (req, res)=>{
 	let type="TY001";
-	const products=await productService.listProduct(type);
-	res.render('product/soapList', { products });
+	const productPerPage=6;
+	const pageNumber=!isNaN(req.query.page) &&req.query.page>1?req.query.page:1;
+	const products=await productService.listProduct(type,pageNumber,productPerPage);
+	// products.aggregate([
+	// 	{
+	// 		$lookup:
+	// 			{
+	// 				from: productCategories,
+	// 				localField: 'CategoryID',
+	// 				foreignField: 'Category'
+	// 			}
+	// 	}
+	// ]);
+	res.render('product/soapList', { products});
 };

@@ -3,38 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1141acba-0aed-4c2e-a0ae-bc4b1a8c0b80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/candle_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/contact.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/home_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/home_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/home_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/home_4.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/oil_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/soap_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/productService.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/soapList.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/soapList.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/WebBuyer-main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,6 +40,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\dwl\WEB_TEST\CherishWeb-master(05)\public\images" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -88,7 +64,10 @@
       <workItem from="1641463564874" duration="1783000" />
       <workItem from="1641465384191" duration="512000" />
       <workItem from="1642233686531" duration="647000" />
-      <workItem from="1642251789061" duration="576000" />
+      <workItem from="1642251789061" duration="1777000" />
+      <workItem from="1642253596056" duration="1906000" />
+      <workItem from="1642296720713" duration="1782000" />
+      <workItem from="1642298543963" duration="863000" />
     </task>
     <servers />
   </component>
@@ -96,9 +75,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="331" y="171" key="FileChooserDialogImpl" timestamp="1642233727868">
+    <state x="331" y="171" key="FileChooserDialogImpl" timestamp="1642254545275">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="331" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642233727868" />
+    <state x="331" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642254545275" />
   </component>
 </project>
