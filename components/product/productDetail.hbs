@@ -13,8 +13,8 @@
                 <div class="row product-gallery mx-1">
                     <div class="col-12 mb-0">
                         <figure class="view overlay rounded z-depth-1 main-img">
-                            <a href="{{Image}}" data-size="710x823">
-                                <img src="{{Image}}" width="500px" height="500px"
+                            <a href="/images/{{Image}}" data-size="710x823">
+                                <img src="/images/{{Image}}" width="500px" height="500px"
                                      class="img-fluid z-depth-1">
                             </a>
                         </figure>
@@ -208,25 +208,28 @@
             </div>
             <div>
                 <!-- Your review -->
-                <div class="md-form md-outline">
-                    <label for="form76">Your review</label>
-                    <textarea id="form76" class="md-textarea form-control pr-6" rows="4"></textarea>
+                <form>
+                    <div class="md-form md-outline">
+                        <label for="form76">Your review</label>
+                        <textarea id="form76" class="md-textarea form-control pr-6" rows="4"></textarea>
 
-                </div>
-                <!-- Name -->
-                <div class="md-form md-outline">
-                    <label for="form75">Name</label>
-                    <input type="text" id="form75" class="form-control pr-6">
-                </div>
-                <!-- Email -->
-                <div class="md-form md-outline">
-                    <label for="form77">Email</label>
-                    <input type="email" id="form77" class="form-control pr-6"> </br>
-                </div>
-                <div class="text-right pb-2">
-                    <button type="button" class="btn btn-primary">Add a review</button>
-                    </br>
-                </div>
+                    </div>
+                    <!-- Name -->
+                    <div class="md-form md-outline">
+                        <label for="form75">Name</label>
+                        <input type="text" id="form75" class="form-control pr-6">
+                    </div>
+                    <!-- Email -->
+                    <div class="md-form md-outline">
+                        <label for="form77">Email</label>
+                        <input type="email" id="form77" class="form-control pr-6"> </br>
+                    </div>
+                    <div class="text-right pb-2">
+                        <button type="submit" class="btn btn-primary">Add a review</button>
+                        </br>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>

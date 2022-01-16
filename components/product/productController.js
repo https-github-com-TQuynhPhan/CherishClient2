@@ -1,22 +1,32 @@
 const productService=require('./productService');
-const productCategories=require('../../models/productcategories')
+const productcategories=require('../../models/productcategories');
 
 exports.listProduct = async (req, res)=>{
 	let type="TY001";
 	const productPerPage=6;
 	const pageNumber=!isNaN(req.query.page) &&req.query.page>1?req.query.page:1;
 	const products=await productService.listProduct(type,pageNumber,productPerPage);
-	// products.aggregate([
+	// productcategories.aggregate([
 	// 	{
 	// 		$lookup:
 	// 			{
-	// 				from: productCategories,
+	// 				from: products,
 	// 				localField: 'CategoryID',
-	// 				foreignField: 'Category'
+	// 				foreignField: 'Category',
+	// 				as:category
 	// 			}
 	// 	}
-	// ]);
-	res.render('product/soapList', { products});
+	// ],function (err,res){
+	// 	if (err) throw err;
+	// 	console.log(res);
+	// } );
+	const category=productcategories.find({CategoryID:type});
+	//console.log(category.CategoryID);
+
+	
+	//const category=productcategories.find({CategoryID: type});
+	// console.log("ID",category);
+	res.render('product/soapList', { products, category: category});
 };
 
 exports.listDetail=async (req,res)=>{
