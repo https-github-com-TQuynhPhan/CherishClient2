@@ -31,7 +31,6 @@
             <div class="col-md-6">
 
                 <h5>{{ProductName}}</h5>
-                <p class="mb-2 text-muted text-uppercase small">Shirts</p>
                 <div class="rating">
                     <i class="fas fa-star fa-sm text-primary"></i>
                     <i class="fas fa-star fa-sm text-primary"></i>
@@ -126,13 +125,12 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
-               aria-selected="false">Reviews (1)</a>
+               aria-selected="false">Reviews</a>
         </li>
     </ul>
     <div class="tab-content" id="advancedTabContent">
         <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
             <h5>Product Description</h5>
-            <p class="small text-muted text-uppercase mb-2">Shirts</p>
             <div class="rating">
                 <i class="fas fa-star fa-sm text-primary"></i>
                 <i class="fas fa-star fa-sm text-primary"></i>
@@ -165,50 +163,20 @@
         <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
 
             <div class="media mt-3 mb-4">
-                <img class="d-flex mr-3 z-depth-1" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg"
-                     width="62" alt="Generic placeholder image">
                 <div class="media-body">
-                    <div class="d-sm-flex justify-content-between">
-                        <p class="mt-1 mb-2">
-                            <strong>Marthasteward </strong>
-                            <span>– </span><span>January 28, 2020</span>
-                        </p>
-                        <div class="rating">
-                            <i class="fas fa-star fa-sm text-primary"></i>
-                            <i class="fas fa-star fa-sm text-primary"></i>
-                            <i class="fas fa-star fa-sm text-primary"></i>
-                            <i class="fas fa-star fa-sm text-primary"></i>
-                            <i class="far fa-star fa-sm text-primary"></i>
-                        </div>
+                    <div id="reviewsProduct">
                     </div>
-                    <p class="mb-0">Nice one, love it!</p>
                 </div>
             </div>
             <hr>
             <h5 class="mt-4">Add a review</h5>
             <p>Your email address will not be published.</p>
-            <div class="my-3">
-                <div class="rating mb-0">
-                    <a href="#!">
-                        <i class="fas fa-star fa-sm text-primary"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="fas fa-star fa-sm text-primary"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="fas fa-star fa-sm text-primary"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="fas fa-star fa-sm text-primary"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="far fa-star fa-sm text-primary"></i>
-                    </a>
-                </div>
-            </div>
             <div>
                 <!-- Your review -->
+            {{#each productDetail}}
                 <form>
+
+                    <input type="hidden" name="productID" value="{{ProductID}}">
 
                     {{#unless user}}
                         <div class="md-form md-outline">
@@ -217,8 +185,6 @@
                         </div>
                     {{/unless}}
 
-
-
                     <div class="md-form md-outline">
                         <label for="form77">Rate</label>
                         <input type="number" name="Rate" id="form77" class="form-control pr-6"> </br>
@@ -226,21 +192,76 @@
 
                     <div class="md-form md-outline">
                         <label for="form76">Your review</label>
-                        <textarea id="form76" name="Detail" class="md-textarea form-control pr-6" rows="4"></textarea>
+                        <input type="text" id="form76" name="Detail" class="md-textarea form-control pr-6" rows="4">
 
                     </div>
 
                     <div class="text-right pb-2">
-                        <button type="submit" class="btn btn-primary">Add a review</button>
+                        <button type="submit" id="postReview" class="btn btn-primary">Add a review</button>
                         </br>
                     </div>
                 </form>
+            {{/each}}
 
             </div>
         </div>
     </div>
 
 </div>
+
+{{#section 'script'}}
+    <script>
+        // add review
+        $('#postReview').on('click', e => {
+            e.preventDefault();
+            let productID = $('input[name=productID]').val();
+            <!--let name={{user.account}};-->
+            let name = $('input[name=Name]').val();
+            let rate = $('input[name=Rate]').val();
+            let detail = $('input[name=Detail]').val();
+
+            $.ajax({
+                url: "/api/product/review",
+                method: 'POST',
+                data: {
+                    name,
+                    productID,
+                    rate,
+                    detail
+                },
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        });
+
+        //load review
+        $.getJSON(`/api/product/:${$('input[name=productID]').val()}/reviews`,function (data) {
+            let arr=[];
+            for (const d of data){
+                if (d.ProductID===$('input[name=productID]').val()){
+                    arr.push(d);
+                }
+            }
+
+            data=arr;
+            let rate=data.Rate;
+            let detail=data.Rate;
+            let html='';
+            for (const d of data) {
+                html+=`<p>${d.Name}</p>`;
+                for (let i = 0; i < d.Rate; i++) {
+                    html += '<i class="fas fa-star fa-sm text-primary"></i>';
+                }
+                for (let i = 0; i < 5 - d.Rate; i++) {
+                    html += '<i class="far fa-star fa-sm text-primary"></i>';
+                }
+                html += `<p>${d.Detail}</p>`;
+            }
+            $('#reviewsProduct').html(html);
+        });
+    </script>
+{{/section}}
 <!-- Classic tabs -->
 
 

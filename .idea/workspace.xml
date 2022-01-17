@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1141acba-0aed-4c2e-a0ae-bc4b1a8c0b80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/product/apiProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/product/apiProductController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/product/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/productDetail.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/productDetail.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WEB_ADMIN_TEST/CherishAdmin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -108,6 +111,15 @@
       <workItem from="1642343277761" duration="197000" />
       <workItem from="1642351012074" duration="162000" />
       <workItem from="1642351208743" duration="1779000" />
+      <workItem from="1642385999329" duration="1066000" />
+      <workItem from="1642387092549" duration="1777000" />
+      <workItem from="1642388902470" duration="1783000" />
+      <workItem from="1642390716753" duration="1779000" />
+      <workItem from="1642392532751" duration="1762000" />
+      <workItem from="1642401674380" duration="1779000" />
+      <workItem from="1642403482975" duration="1786000" />
+      <workItem from="1642405307631" duration="1781000" />
+      <workItem from="1642407118098" duration="657000" />
     </task>
     <servers />
   </component>

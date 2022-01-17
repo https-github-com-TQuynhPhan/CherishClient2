@@ -6,7 +6,8 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('./auth/passport');
-const express_handlebars_sections = require('express-handlebars-sections');
+const expressHandlebarsSection=require('express-handlebars-sections');
+const hbs=require('hbs');
 require('dotenv').config();
 
 const indexRouter = require('./routes/index');
@@ -16,7 +17,7 @@ const contactRouter = require('./components/contact/contact');
 const authRouter = require('./components/auth/authRouter');
 const sessionHandler = require('./auth/sessionHandler');
 const loggerHandler = require('./auth/logger');
-const apiProductRouter=require('./api/product');
+const apiProductRouter=require('./api/product/index');
 
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log('Database connected');
@@ -30,6 +31,9 @@ const app = express();
 // app.set('views', path.join(__dirname, 'views'));
 app.set('views', [__dirname + '/views', __dirname + '/components']);
 app.set('view engine', 'hbs');
+
+// hbs.handlebars.registerHelper(expressHandlebarsSection());
+expressHandlebarsSection(hbs.handlebars);
 
 
 app.use(logger('dev'));

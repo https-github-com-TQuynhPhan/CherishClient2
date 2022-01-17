@@ -1,5 +1,4 @@
 const productService=require('./productService');
-const productcategories=require('../../models/productcategories');
 
 exports.listProduct = async (req, res)=>{
 	const productPerPage=9;
