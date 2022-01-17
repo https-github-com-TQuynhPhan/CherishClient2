@@ -4,7 +4,7 @@ exports.review = async (req, res) => {
     const {productID, name, rate, detail} = req.body;
     try {
         const newReview = await Review.create({
-            ReviewID: "BL007",
+            ReviewID: "BL011",
             Name: name,
             ProductID: productID,
             CommentDay: new Date().toISOString().slice(0, 10),
