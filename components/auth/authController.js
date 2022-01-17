@@ -31,6 +31,15 @@ exports.logout = (req, res) => {
 	res.redirect('/');
 };
 
-exports.userInfo = (req, res) => {
-	res.render('auth/userInfo');
+exports.userInfo = async (req, res) => {
+
+	let account="user1";
+	try{
+		account=req.params.Account;
+
+	}catch (err) {
+		throw err;
+	}
+	const userInfo=await authService.userInfo(account);
+	res.render('auth/userInfo',{userInfo});
 };

@@ -22,5 +22,5 @@ exports.listDetail=async (req,res)=>{
 };
 
 exports.cart=(req,res)=>{
-	res.render('product/cart');
+	res.render('product/cart', { title: 'Express' });
 };

@@ -9,7 +9,7 @@ router.get('/signIn', authController.signInGet);
 router.post('/signIn',
     passport.authenticate('local', {
         successRedirect: '/',
-        failureRedirect: '/signIn?wrongPassword'
+        failureRedirect: '/signIn?wrongPassword',
     }));
 
 router.get('/signUp', authController.signUpGet);

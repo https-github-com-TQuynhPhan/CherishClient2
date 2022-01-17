@@ -18,6 +18,7 @@ const authRouter = require('./components/auth/authRouter');
 const sessionHandler = require('./auth/sessionHandler');
 const loggerHandler = require('./auth/logger');
 const apiProductRouter=require('./api/product/index');
+const cartRouter=require('./components/cart/cartRouter');
 
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log('Database connected');
@@ -63,6 +64,7 @@ app.use('/product', productRouter);
 app.use('/contact', contactRouter);
 app.use('/', authRouter);
 app.use('/api/product',apiProductRouter);
+app.use('/cart',cartRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

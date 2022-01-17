@@ -15,4 +15,6 @@ router.get('/', productController.listProduct);
 // });
 
 router.get('/:ProductID', productController.listDetail);
+
+router.get('/cart',productController.cart);
 module.exports = router;
