@@ -20,3 +20,7 @@ exports.listDetail=async (req,res)=>{
 	const productDetail=await productService.listDetail(id);
 	res.render('product/productDetail',{productDetail});
 };
+
+exports.cart=(req,res)=>{
+	res.render('product/cart');
+};

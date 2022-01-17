@@ -129,37 +129,36 @@
         </li>
     </ul>
     <div class="tab-content" id="advancedTabContent">
-        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-            <h5>Product Description</h5>
-            <div class="rating">
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="fas fa-star fa-sm text-primary"></i>
-                <i class="far fa-star fa-sm text-primary"></i>
+        {{#each productDetail}}
+            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                <h5>Product Description</h5>
+                <!--            <div class="rating">-->
+                <!--                <i class="fas fa-star fa-sm text-primary"></i>-->
+                <!--                <i class="fas fa-star fa-sm text-primary"></i>-->
+                <!--                <i class="fas fa-star fa-sm text-primary"></i>-->
+                <!--                <i class="fas fa-star fa-sm text-primary"></i>-->
+                <!--                <i class="far fa-star fa-sm text-primary"></i>-->
+                <!--            </div>-->
+                <h6>${{Price}}</h6>
+                <p class="pt-1">{{Description}}</p>
             </div>
-            <h6>12.99 $</h6>
-            <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
-                error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
-                officia quis dolore quos sapiente tempore alias.</p>
-        </div>
-        <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
-            <h5>Additional Information</h5>
-            <table class="table table-striped table-bordered mt-3">
-                <thead>
-                <tr>
-                    <th scope="row" class="w-150 dark-grey-text h6">Weight</th>
-                    <td><em>0.3 kg</em></td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row" class="w-150 dark-grey-text h6">Dimensions</th>
-                    <td><em>50 × 60 cm</em></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                <h5>Additional Information</h5>
+                <table class="table table-striped table-bordered mt-3">
+                    <thead>
+                    <tr>
+                        <th scope="row" class="w-150 dark-grey-text h6">Weight</th>
+                        <td><em>{{Weight}} g</em></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row" class="w-150 dark-grey-text h6">Count</th>
+                        <td><em>{{Count}}</em></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
 
             <div class="media mt-3 mb-4">
@@ -171,40 +170,40 @@
             <hr>
             <h5 class="mt-4">Add a review</h5>
             <p>Your email address will not be published.</p>
-            <div>
-                <!-- Your review -->
-            {{#each productDetail}}
-                <form>
+        <div>
+            <!-- Your review -->
 
-                    <input type="hidden" name="productID" value="{{ProductID}}">
+            <form>
 
-                    {{#unless user}}
-                        <div class="md-form md-outline">
-                            <label for="form75">Name</label>
-                            <input type="text" name="Name" id="form75" class="form-control pr-6">
-                        </div>
-                    {{/unless}}
+                <input type="hidden" name="productID" value="{{ProductID}}">
 
+                {{#unless user}}
                     <div class="md-form md-outline">
-                        <label for="form77">Rate</label>
-                        <input type="number" name="Rate" id="form77" class="form-control pr-6"> </br>
+                        <label for="form75">Name</label>
+                        <input type="text" name="Name" id="form75" class="form-control pr-6">
                     </div>
+                {{/unless}}
 
-                    <div class="md-form md-outline">
-                        <label for="form76">Your review</label>
-                        <input type="text" id="form76" name="Detail" class="md-textarea form-control pr-6" rows="4">
+                <div class="md-form md-outline">
+                    <label for="form77">Rate</label>
+                    <input type="number" name="Rate" id="form77" class="form-control pr-6"> </br>
+                </div>
 
-                    </div>
+                <div class="md-form md-outline">
+                    <label for="form76">Your review</label>
+                    <input type="text" id="form76" name="Detail" class="md-textarea form-control pr-6" rows="4">
 
-                    <div class="text-right pb-2">
-                        <button type="submit" id="postReview" class="btn btn-primary">Add a review</button>
-                        </br>
-                    </div>
-                </form>
-            {{/each}}
+                </div>
 
-            </div>
-        </div>
+                <div class="text-right pb-2">
+                    <button type="submit" id="postReview" class="btn btn-primary">Add a review</button>
+                    </br>
+                </div>
+            </form>
+        {{/each}}
+
+    </div>
+    </div>
     </div>
 
 </div>
@@ -236,20 +235,20 @@
         });
 
         //load review
-        $.getJSON(`/api/product/:${$('input[name=productID]').val()}/reviews`,function (data) {
-            let arr=[];
-            for (const d of data){
-                if (d.ProductID===$('input[name=productID]').val()){
+        $.getJSON(`/api/product/:${$('input[name=productID]').val()}/reviews`, function (data) {
+            let arr = [];
+            for (const d of data) {
+                if (d.ProductID === $('input[name=productID]').val()) {
                     arr.push(d);
                 }
             }
 
-            data=arr;
-            let rate=data.Rate;
-            let detail=data.Rate;
-            let html='';
+            data = arr;
+            let rate = data.Rate;
+            let detail = data.Rate;
+            let html = '';
             for (const d of data) {
-                html+=`<p>${d.Name}</p>`;
+                html += `<p>${d.Name}</p>`;
                 for (let i = 0; i < d.Rate; i++) {
                     html += '<i class="fas fa-star fa-sm text-primary"></i>';
                 }
