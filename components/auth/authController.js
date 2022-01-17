@@ -30,3 +30,7 @@ exports.logout = (req, res) => {
 	req.logout();
 	res.redirect('/');
 };
+
+exports.userInfo = (req, res) => {
+	res.render('auth/userInfo');
+};
